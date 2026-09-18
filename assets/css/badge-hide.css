@@ -1,0 +1,8 @@
+/* Suppresses Webflow's "Made in Webflow" badge, which webflow.schunk.*.js
+   injects at runtime by fetching two SVGs directly from Webflow's own
+   cloudfront CDN. Requested removal: no local copies of the badge assets
+   are included in this repo, and this rule hides the injected element
+   regardless of what the runtime decides to inject. */
+.w-webflow-badge {
+  display: none !important;
+}
