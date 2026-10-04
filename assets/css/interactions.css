@@ -22,8 +22,8 @@
    header-scroll.js toggles .is-scrolled. */
 .top-navbar {
   transition:
-    background-color 250ms ease-in,
-    border-bottom-color 250ms ease-in;
+    background-color 100ms ease-in,
+    border-bottom-color 100ms ease-in;
 }
 
 .top-navbar.is-scrolled {
