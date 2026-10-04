@@ -31,7 +31,37 @@
   border-bottom-color: var(--colors--light-gray);
 }
 
-/* Storyboard carousel (Student work): 8px pagination dots. */
+/* Storyboard carousel (Student work). Give it a fixed footprint (full width,
+   reserved image ratio) so it doesn't depend on lazy-loaded images. Webflow
+   measures the slider once at load: a collapsed slider yields one page and
+   stacks every slide, and a shrink-wrapped one shifts with the breakpoint. */
+.slider-storyboards {
+  align-self: stretch;
+  width: 100%;
+}
+
+/* From 1440px the shared stylesheet lets the content column shrink to its
+   widest child, which used to be this slider's image once it loaded. Hold the
+   column at its 1280px max from the start. */
+@media (min-width: 1440px) {
+  .slider-storyboards {
+    min-width: 1280px;
+  }
+}
+
+.slider-storyboards .w-slide {
+  height: auto;
+  aspect-ratio: 2172 / 972;
+}
+
+.slider-storyboards .w-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 8px pagination dots. */
 .slider-storyboards .w-slider-dot {
   width: 8px;
   height: 8px;
