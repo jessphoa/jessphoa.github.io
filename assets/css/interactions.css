@@ -31,6 +31,12 @@
   border-bottom-color: var(--colors--light-gray);
 }
 
+/* Storyboard carousel (Student work): 8px pagination dots. */
+.slider-storyboards .w-slider-dot {
+  width: 8px;
+  height: 8px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-hero {
     animation: none;
