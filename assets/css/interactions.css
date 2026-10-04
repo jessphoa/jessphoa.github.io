@@ -1,0 +1,42 @@
+/* Native replacements for the two Webflow interactions (IX2) this site used. */
+
+/* Home hero: fade in on page load. 80px on tablet/desktop; the shared
+   stylesheet's smaller phone sizes still apply below 768px. */
+@media (min-width: 768px) {
+  .home-hero {
+    font-size: 80px;
+  }
+}
+
+.home-hero {
+  font-weight: 700;
+  animation: hero-fade-in 500ms ease-in both;
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Header: transparent at the top of the page, white once scrolling starts.
+   header-scroll.js toggles .is-scrolled. */
+.top-navbar {
+  transition:
+    background-color 500ms ease-in,
+    border-bottom-color 500ms ease-in;
+}
+
+.top-navbar.is-scrolled {
+  background-color: var(--colors--white);
+  border-bottom-color: var(--colors--light-gray);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero {
+    animation: none;
+  }
+
+  .top-navbar {
+    transition: none;
+  }
+}

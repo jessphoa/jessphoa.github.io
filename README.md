@@ -17,8 +17,9 @@ work/
   student-work/index.html
   pro-bono/index.html
 assets/
-  css/   shared Webflow stylesheet + a small badge-hiding override
-  js/    Webflow runtime bundles + jQuery
+  css/   shared Webflow stylesheet, badge-hiding override, and interactions.css
+         (native hero fade-in + scroll-aware header, replacing Webflow interactions)
+  js/    Webflow runtime bundles, jQuery, and header-scroll.js
   img/   all site images
   files/ resume PDF
 ```
